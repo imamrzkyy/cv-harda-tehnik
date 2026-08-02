@@ -1,0 +1,316 @@
+/*=========================================
+  Laptop (≤1200px)
+=========================================*/
+
+@media (max-width:1200px){
+
+    .hero-title{
+        font-size:52px;
+    }
+
+    .container{
+        max-width:960px;
+    }
+
+}
+
+/*=========================================
+  Tablet (≤992px)
+=========================================*/
+
+@media (max-width:992px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .navbar{
+        background:#fff !important;
+    }
+
+    .navbar-brand{
+        color:var(--primary) !important;
+    }
+
+    .nav-link{
+        color:var(--dark) !important;
+        margin:12px 0;
+    }
+
+    .navbar-collapse{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    margin-top:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+    .btn-login{
+        border:2px solid var(--primary);
+        color:var(--primary);
+        margin-bottom:10px;
+    }
+
+    .hero{
+        padding-top:150px;
+        text-align:center;
+    }
+
+    .hero-title{
+        font-size:46px;
+    }
+
+    .hero-text{
+        margin:auto;
+        margin-bottom:30px;
+    }
+
+    .hero-list{
+        justify-content:center;
+    }
+
+    .hero-button{
+        justify-content:center;
+    }
+
+    .hero-image{
+        margin-top:50px;
+        max-width:80%;
+    }
+
+    .experience-box{
+        display:none;
+    }
+
+}
+
+/*=========================================
+  Mobile (≤768px)
+=========================================*/
+
+@media (max-width:768px){
+
+    h1{
+        font-size:40px;
+    }
+
+    h2{
+        font-size:32px;
+    }
+
+    h3{
+        font-size:24px;
+    }
+
+    .hero-title{
+        font-size:38px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .hero-list{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .hero-button{
+
+        flex-direction:column;
+
+    }
+
+    .hero-button .btn{
+
+        width:100%;
+
+    }
+
+    .counter-section{
+
+        margin-top:0;
+
+    }
+
+    .counter-box{
+
+        margin-bottom:20px;
+
+    }
+
+    .service-card{
+
+        padding:30px;
+
+    }
+
+    .feature-card{
+
+        margin-bottom:25px;
+
+    }
+
+    .booking-box{
+
+        padding:35px 25px;
+
+    }
+
+    .booking-box h2{
+
+        font-size:30px;
+
+    }
+
+    .product-image img{
+
+        height:220px;
+
+    }
+
+    .gallery-item img{
+
+        height:220px;
+
+    }
+
+    .footer{
+
+        text-align:center;
+
+    }
+
+}
+
+/*=========================================
+  Small Mobile (≤576px)
+=========================================*/
+
+@media (max-width:576px){
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+        padding-top:130px;
+        padding-bottom:80px;
+
+    }
+
+    .hero-title{
+
+        font-size:32px;
+
+    }
+
+    .hero-badge{
+
+        font-size:13px;
+
+    }
+
+    .hero-image{
+
+        max-width:100%;
+        margin-top:40px;
+
+    }
+
+    .counter-box{
+
+        padding:25px;
+
+    }
+
+    .counter-box h2{
+
+        font-size:34px;
+
+    }
+
+    .service-icon{
+
+        width:75px;
+        height:75px;
+
+    }
+
+    .service-icon i{
+
+        font-size:34px;
+
+    }
+
+    .contact-box{
+
+        padding:25px;
+
+    }
+
+    .whatsapp{
+
+        width:55px;
+        height:55px;
+        font-size:28px;
+        right:15px;
+        bottom:15px;
+
+    }
+
+    .back-to-top{
+
+        right:15px;
+        bottom:85px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero .row{
+        flex-direction: column;
+    }
+
+    .hero .col-lg-6{
+        width:100% !important;
+        max-width:100% !important;
+        flex:0 0 100% !important;
+    }
+
+    .hero-image{
+        display:block;
+        width:100%;
+        max-width:350px;
+        margin:40px auto 0;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    html,
+    body{
+        overflow-x:hidden;
+        width:100%;
+    }
+
+    *{
+        max-width:100%;
+    }
+
+    .container,
+    .container-fluid,
+    .row{
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+}
