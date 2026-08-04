@@ -11,7 +11,7 @@ include_once __DIR__ . '/../config/helper.php';
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CV. HARDA TEHNIK MANDIRI</title>
+    <title>RUMAH AC HARDA TEHNIK MANDIRI</title>
 
     <meta name="description"
         content="CV. Harda Tehnik Mandiri melayani Service AC, Perbaikan AC, Bongkar Pasang AC, Cuci AC, Isi Freon serta Jual AC Baru dan Bekas.">

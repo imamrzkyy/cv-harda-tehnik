@@ -29,7 +29,7 @@ if ($isLogin && isset($_SESSION['id_user'])) {
     <div class="container">
 
         <a class="navbar-brand text-primary fw-bold" href="<?= $base_url ?>index.php">
-            CV. HARDA TEHNIK MANDIRI
+        AC HARDA TEHNIK MANDIRI
         </a>
 
         <button class="navbar-toggler"
@@ -72,15 +72,14 @@ if ($isLogin && isset($_SESSION['id_user'])) {
 
             </ul>
 
-            <div class="d-flex ms-lg-4 mt-3 mt-lg-0">
+            <div class="d-flex flex-column flex-lg-row ms-lg-4 mt-3 mt-lg-0 align-items-lg-center">
 
                 <?php if ($isLogin) { ?>
 
-                <div class="dropdown">
+                <div class="dropdown w-100">
 
                     <!-- Tombol Dropdown dengan Foto Profil Dinamis -->
-                    <button class="btn btn-light border dropdown-toggle d-flex align-items-center gap-2 py-1 px-2 rounded-pill shadow-sm"
-                        data-bs-toggle="dropdown" style="background-color: #f8f9fa;">
+                    <button class="btn btn-light border dropdown-toggle d-flex align-items-center gap-2 py-2 px-3 rounded-pill shadow-sm w-100 justify-content-between"data-bs-toggle="dropdown" style="background-color: #f8f9fa;">
                         
                         <?php if (!empty($foto_user) && file_exists(__DIR__ . '/../uploads/foto/' . $foto_user)): ?>
                             <img src="<?= $base_url ?>uploads/foto/<?= $foto_user; ?>" class="rounded-circle shadow-sm" style="width: 28px; height: 28px; object-fit: cover;" alt="Foto">

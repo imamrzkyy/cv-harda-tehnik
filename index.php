@@ -18,7 +18,7 @@ include "includes/navbar.php";
         <div class="row align-items-center">
 
             <!-- Text -->
-            <div class="col-lg-6 order-2 order-lg-1">
+            <div class="col-lg-6 order-1 order-lg-1">
 
                 <span class="hero-badge">
                     <i class="bi bi-patch-check-fill"></i>
@@ -32,7 +32,7 @@ include "includes/navbar.php";
 
                 <p class="hero-text">
 
-                    CV. Harda Tehnik Mandiri melayani jasa
+                    Rumah AC Harda Tehnik Mandiri melayani jasa
                     Service AC, Cuci AC, Perbaikan AC,
                     Bongkar Pasang AC, Isi Freon,
                     serta Penjualan AC Baru & Bekas
@@ -90,7 +90,7 @@ include "includes/navbar.php";
             </div>
 
             <!-- Image -->
-            <div class="col-lg-6 text-center order-1 order-lg-2">
+            <div class="col-lg-6 text-center order-2 order-lg-2">
 
                 <img
                     src="<?= $base_url ?>assets/images/hero/gambar teknisi.png"
@@ -236,13 +236,13 @@ include "includes/navbar.php";
 
                     <h2>
 
-                        CV. HARDA TEHNIK MANDIRI
+                        RUMAH AC HARDA TEHNIK MANDIRI
 
                     </h2>
 
                     <p>
 
-                        CV. Harda Tehnik Mandiri merupakan perusahaan
+                        Rumah AC Harda Tehnik Mandiri merupakan perusahaan
                         yang bergerak di bidang jasa service,
                         perawatan, pemasangan,
                         bongkar pasang, isi freon,
@@ -846,7 +846,7 @@ while($p = mysqli_fetch_assoc($query)){
 
             <p>
                 Beberapa hasil pekerjaan teknisi
-                CV. Harda Tehnik Mandiri.
+                Rumah AC Harda Tehnik Mandiri.
             </p>
 
         </div>
@@ -1075,7 +1075,7 @@ while($p = mysqli_fetch_assoc($query)){
 
             <p>
                 Beberapa pertanyaan yang sering diajukan pelanggan
-                mengenai layanan CV. Harda Tehnik Mandiri.
+                mengenai layanan Rumah AC Harda Tehnik Mandiri.
             </p>
 
         </div>

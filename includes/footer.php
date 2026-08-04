@@ -148,7 +148,7 @@
 
                     © <?= date('Y'); ?>
 
-                    CV. HARDA TEHNIK MANDIRI.
+                    RUMAH AC HARDA TEHNIK MANDIRI.
 
                     All Rights Reserved.
 
