@@ -207,7 +207,7 @@ if (isset($_POST['login'])) {
 
     <p class="subtitle">
 
-        CV. Harda Tehnik Mandiri
+        Rumah AC Harda Tehnik Mandiri
 
     </p>
 
@@ -283,7 +283,7 @@ if (isset($_POST['login'])) {
 
         © <?= date('Y'); ?>
 
-        CV. Harda Tehnik Mandiri
+        Harda Tehnik Mandiri
 
     </div>
 

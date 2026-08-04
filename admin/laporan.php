@@ -50,7 +50,8 @@ include "header.php";
 include "sidebar.php";
 ?>
 
-<div class="main-content px-4 py-4" style="margin-left: 260px;">
+<main class="content">
+    <div class="container-fluid px-4 py-4">
     
     <!-- Judul Halaman -->
     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4">
@@ -172,24 +173,30 @@ include "sidebar.php";
             </div>
         </div>
     </div>
-
 </div>
+</main>
 
 <!-- CSS Tambahan khusus untuk cetak/print laporan agar rapi -->
 <style>
-@media print {
-    .sidebar, .navbar, form, .btn, .main-content {
-        margin: 0 !important;
-        padding: 0 !important;
+@media print{
+
+    .sidebar,
+    .mobile-header,
+    .overlay,
+    form,
+    .btn{
+        display:none !important;
     }
-    /* Sembunyikan elemen navigasi dan tombol filter saat dicetak */
-    form, .btn, .sidebar, header {
-        display: none !important;
+
+    .content{
+        margin-left:0 !important;
+        padding:0 !important;
     }
-    body {
-        background-color: white !important;
-        color: black !important;
+
+    body{
+        background:#fff !important;
     }
+
 }
 </style>
 

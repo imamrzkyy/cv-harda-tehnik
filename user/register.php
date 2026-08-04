@@ -192,7 +192,7 @@ padding:35px 25px;
 
 <img src="../assets/images/logo/logo CV HD.png">
 
-<h2>CV. HARDA TEHNIK MANDIRI</h2>
+<h2>RUMAH AC HARDA TEHNIK MANDIRI</h2>
 
 <p>
 

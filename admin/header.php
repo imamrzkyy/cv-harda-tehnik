@@ -65,6 +65,25 @@
 
         .table{
             vertical-align:middle;
+            min-width:1000px;
+        }
+
+        .table-responsive{
+            overflow-x:auto;
+            -webkit-overflow-scrolling:touch;
+        }
+
+        .table th{
+            white-space:nowrap;
+        }
+
+        .table td{
+            white-space:nowrap;
+        }
+
+        .table td:nth-child(4){
+            white-space:normal;
+            min-width:280px;
         }
 
         /* ==========================
@@ -236,14 +255,12 @@
             CONTENT
         ========================== */
 
-        .content{
-
+       .content{
             margin-left:260px;
-
             padding:30px;
-
+            width:calc(100% - 260px);
+            overflow-x:hidden;
             transition:.3s;
-
         }
 
         /* ==========================
@@ -333,11 +350,26 @@
             }
 
             .content{
-
                 margin-left:0;
+                width:100%;
+                padding:30px;
+            }
 
-                padding:20px;
+            .table-responsive{
+                overflow-x:auto;
+            }
 
+            .table{
+                min-width:950px;
+            }
+
+            .card-body{
+                padding:15px !important;
+            }
+
+            .page-title,
+            h3{
+                font-size:24px;
             }
 
             .mobile-header{

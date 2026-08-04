@@ -219,7 +219,7 @@ body::before{
 Silakan login untuk melakukan booking service AC,
 melihat status booking,
 mengelola akun,
-dan menikmati layanan CV. Harda Tehnik Mandiri.
+dan menikmati layanan Rumah AC Harda Tehnik Mandiri.
 
 </p>
 
@@ -235,7 +235,7 @@ Login Akun
 
 <p class="text-muted">
 
-CV. HARDA TEHNIK MANDIRI
+RUMAH AC HARDA TEHNIK MANDIRI
 
 </p>
 

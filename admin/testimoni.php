@@ -38,7 +38,7 @@ $query_testimoni = mysqli_query($koneksi, "SELECT * FROM testimoni ORDER BY id_t
 ?>
 
 <!-- KONTEN UTAMA ADMIN -->
-<main class="content py-4" style="margin-left: 260px;"> <!-- Sesuaikan margin-left dengan layout admin Anda -->
+<main class="content py-4"> <!-- Sesuaikan margin-left dengan layout admin Anda -->
     <div class="container-fluid px-4">
         
         <!-- Judul Halaman -->
@@ -69,7 +69,7 @@ $query_testimoni = mysqli_query($koneksi, "SELECT * FROM testimoni ORDER BY id_t
             <div class="card-header bg-white py-3 px-4 border-bottom rounded-top-4">
                 <h5 class="mb-0 fw-bold text-dark"><i class="bi bi-table me-2 text-secondary"></i> Daftar Testimoni Masuk</h5>
             </div>
-            <div class="card-body p-4">
+            <div class="card-body p-3">
                 <div class="table-responsive">
                     <table class="table table-hover align-middle">
                         <thead class="table-light">
