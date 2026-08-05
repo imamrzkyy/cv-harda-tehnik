@@ -1,0 +1,39 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cv-harda-tehnik-app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DB_HOST: infra-mysql
+      DB_PORT: 3306
+      DB_DATABASE: ${MYSQL_DATABASE:-db_harda_tehnik}
+      DB_USERNAME: ${MYSQL_USER:-harda_user}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./uploads:/var/www/html/uploads
+    networks:
+      - cv-harda-net
+      - db-shared
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cv-harda-tehnik-cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARED_TOKEN}
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARED_TOKEN}
+    depends_on:
+      - app
+    networks:
+      - cv-harda-net
+
+networks:
+  cv-harda-net:
+    name: cv-harda-net
+  db-shared:
+    external: true
+    name: db-shared

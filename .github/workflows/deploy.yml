@@ -1,0 +1,59 @@
+name: Deploy cv-harda-tehnik
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            set -e
+            APP_DIR=/home/ubuntu/sewa/cv-harda-tehnik
+            REPO_URL=https://github.com/imamrzkyy/cv-harda-tehnik.git
+
+            # 1. Clone/update repo
+            if [ ! -d "$APP_DIR/.git" ]; then
+              mkdir -p "$APP_DIR"
+              git clone "$REPO_URL" "$APP_DIR"
+            else
+              cd "$APP_DIR"
+              git fetch origin main
+              git reset --hard origin/main
+            fi
+
+            cd "$APP_DIR"
+
+            # 2. Recreate .env dari secrets (jangan dari repo)
+            cat > .env <<'ENVEOF'
+MYSQL_DATABASE=db_harda_tehnik
+MYSQL_USER=harda_user
+MYSQL_PASSWORD=${{ secrets.DB_PASSWORD }}
+CLOUDFLARED_TOKEN=${{ secrets.CLOUDFLARED_TOKEN }}
+ENVEOF
+
+            # 3. Pastikan uploads dir ada & writable
+            mkdir -p uploads/foto uploads/produk
+            chown -R www-data:www-data uploads
+            chmod -R 775 uploads
+
+            # 4. Rebuild & restart
+            docker compose down app
+            docker image prune -af >/dev/null 2>&1 || true
+            docker compose up -d --build app
+            docker compose up -d cloudflared
+            docker image prune -f >/dev/null 2>&1 || true
+            echo "=== Deploy OK ==="
+            docker ps --filter name=cv-harda-tehnik --format "table {{.Names}}\t{{.Status}}"

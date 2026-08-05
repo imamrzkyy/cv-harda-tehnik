@@ -1,0 +1,12 @@
+# Secrets - jangan pernah commit ke repo
+.env
+*.env.local
+
+# Deployment files (dikelola workflow/server)
+deploy.sh
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

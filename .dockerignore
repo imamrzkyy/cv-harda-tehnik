@@ -1,0 +1,12 @@
+*.md
+.git
+.gitignore
+.env
+.env.example
+Dockerfile
+docker-compose.yml
+.dockerignore
+db_harda_tehnik.sql
+*.pem
+.github
+uploads/
