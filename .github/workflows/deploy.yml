@@ -28,21 +28,18 @@ jobs:
             if [ ! -d "$APP_DIR/.git" ]; then
               mkdir -p "$APP_DIR"
               git clone "$REPO_URL" "$APP_DIR"
-            else
-              cd "$APP_DIR"
-              git fetch origin main
-              git reset --hard origin/main
             fi
 
             cd "$APP_DIR"
+            git fetch origin main
+            git reset --hard origin/main
 
-            # 2. Recreate .env dari secrets (jangan dari repo)
-            cat > .env <<'ENVEOF'
-MYSQL_DATABASE=db_harda_tehnik
-MYSQL_USER=harda_user
-MYSQL_PASSWORD=${{ secrets.DB_PASSWORD }}
-CLOUDFLARED_TOKEN=${{ secrets.CLOUDFLARED_TOKEN }}
-ENVEOF
+            # 2. Recreate .env dari secrets (jangan dari repo publik)
+            printf '%s\n' \
+              'MYSQL_DATABASE=db_harda_tehnik' \
+              'MYSQL_USER=harda_user' \
+              'MYSQL_PASSWORD=${{ secrets.DB_PASSWORD }}' \
+              'CLOUDFLARED_TOKEN=${{ secrets.CLOUDFLARED_TOKEN }}' > .env
 
             # 3. Pastikan uploads dir ada & writable
             mkdir -p uploads/foto uploads/produk
@@ -56,4 +53,4 @@ ENVEOF
             docker compose up -d cloudflared
             docker image prune -f >/dev/null 2>&1 || true
             echo "=== Deploy OK ==="
-            docker ps --filter name=cv-harda-tehnik --format "table {{.Names}}\t{{.Status}}"
+            docker ps --filter name=cv-harda-tehnik --format 'table {{.Names}}\t{{.Status}}'
